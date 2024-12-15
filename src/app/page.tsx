@@ -21,13 +21,19 @@ export default function Home() {
     }
   ]
 
+  const now = new Date();
+  const currentMonthYear = now.toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+
+  const [month, year] = currentMonthYear.split(' ');
+  const formattedDate = `${year} ${month}`;
+
   return (
     <main className="min-h-screen bg-[#f2f2f2] text-black">
       <nav className="fixed w-full top-0 bg-[#f2f2f2] border-b border-black/10 z-50">
         <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Circle className="w-4 h-4" />
-            <span className="text-sm">2024 december</span>
+            <span className="text-sm">{formattedDate}</span>
           </div>
           <div className="hidden lg:flex items-center gap-12 text-sm">
             <Link href="#about">about</Link>
