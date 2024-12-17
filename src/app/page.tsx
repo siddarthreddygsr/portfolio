@@ -40,12 +40,12 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[var(--background-color)] text-[var(--font-color)]">
       <nav className="fixed w-full top-0 bg-[var(--background-color)] border-b border-[var(--font-color)]/10 z-50">
-        <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-center items-center">
+        <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <Circle className="w-4 h-4" />
             <span className="text-sm">{formattedDate}</span>
           </div>
-          <div className="flex-grow hidden lg:flex items-center justify-center gap-12 text-sm">
+          <div className="hidden lg:flex items-center gap-12 text-sm">
             <Link href="#about">about</Link>
             <Link href="#experience">experience</Link>
             <Link href="#projects">projects</Link>
