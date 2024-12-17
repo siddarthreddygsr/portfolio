@@ -1,4 +1,4 @@
-import { Circle, Square } from 'lucide-react'
+import { Circle, Square, Minus } from 'lucide-react'
 import Link from 'next/link'
 import MobileNav from '../components/MobileNav'
 import ThemeToggle from '../components/ThemeToggle'
@@ -9,7 +9,7 @@ export default function Home() {
       title: "Automated Chatbot",
       description: [
         "RAG-based chatbot with phi-3",
-        "RAG-based chatbot with phi-3"
+        "Seamless integration with existing platforms"
       ],
       link: "https://github.com/siddarthreddygsr/website-chatbot-integration"
     },
@@ -17,7 +17,7 @@ export default function Home() {
       title: "Virtual Staging",
       description: [
         "Flask backend with AWS S3",
-        "lorem ipsum"
+        "Real-time image processing and rendering"
       ],
       link: "https://virtualstagingwizard.com/"
     },
@@ -25,7 +25,7 @@ export default function Home() {
       title: "TeethAPI",
       description: [
         "GAN model for teeth straightening",
-        "GAN model for teeth straightening"
+        "High-performance image analysis and transformation"
       ],
       link: "https://github.com/siddarthreddygsr/teethapi"
     }
@@ -61,7 +61,7 @@ export default function Home() {
 
       <section className="pt-32 pb-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <h1 className="text-3xl sm:text-4xl mb-8">Gurram Siddarth Reddy</h1>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl mb-8 gas-font">GURRAM SIDDARTH REDDY</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
             <div>
               <p className="text-base sm:text-lg mb-4">AI Engineer specializing in development and deployment of machine learning and backend applications.</p>
@@ -90,9 +90,9 @@ export default function Home() {
               <div>
                 <h3 className="text-lg mb-4">Machine Learning Engineer — Duodecimal</h3>
                 <ul className="space-y-2 text-sm">
-                  {/* <li>Built data integrations for shipment tracking</li>
-                  <li>Developed Ruby data processing pipelines</li>
-                  <li>Automated 25% of processes</li> */}
+                  <li>Developing and deploying machine learning models</li>
+                  <li>Optimizing AI algorithms for production environments</li>
+                  <li>Collaborating on cutting-edge AI research projects</li>
                 </ul>
               </div>
             </div>
@@ -136,15 +136,21 @@ export default function Home() {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer" 
-                className="group"
+                className="group block p-4 border border-[var(--font-color)]/10 hover:border-[var(--accent-color)] transition-colors duration-300"
               >
-                <div className="mb-4">
+                <div className="mb-4 flex items-center justify-between">
                   <Square className="w-8 h-8" />
+                  <span className="text-sm text-[var(--font-color)]/60">{`0${index + 1}`}</span>
                 </div>
-                <h3 className="text-lg mb-2 group-hover:text-[var(--accent-color)]">{project.title}</h3>
-                {project.description.map((point, index) => (
-                  <p key={index} className="text-sm text-[var(--font-color)]/60">{point}</p>
-                ))}
+                <h3 className="text-lg mb-4 group-hover:text-[var(--accent-color)]">{project.title}</h3>
+                <ul className="space-y-2">
+                  {project.description.map((point, pointIndex) => (
+                    <li key={pointIndex} className="flex items-start">
+                      <Minus className="w-4 h-4 mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-sm text-[var(--font-color)]/80">{point}</span>
+                    </li>
+                  ))}
+                </ul>
               </a>
             ))}
           </div>

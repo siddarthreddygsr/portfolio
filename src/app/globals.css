@@ -27,3 +27,11 @@ body {
   }
 }
 
+@font-face {
+  font-family: 'Gas';
+  src: url('./fonts/Gas.ttf') format('truetype');
+}
+
+.gas-font {
+  font-family: 'Gas';
+}
