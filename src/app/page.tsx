@@ -1,4 +1,4 @@
-import { Circle, Square, Minus } from 'lucide-react'
+import { Circle, Square, Minus, Triangle } from 'lucide-react'
 import Link from 'next/link'
 import MobileNav from '../components/MobileNav'
 import ThemeToggle from '../components/ThemeToggle'
@@ -61,12 +61,12 @@ export default function Home() {
 
       <section className="pt-32 pb-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl mb-8 gas-font">GURRAM SIDDARTH REDDY</h1>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl mb-8 gas-font text-[var(--accent-color)]">GURRAM SIDDARTH REDDY</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
             <div>
               <p className="text-base sm:text-lg mb-4">AI Engineer specializing in development and deployment of machine learning and backend applications.</p>
               <div className="flex gap-4 text-sm">
-                <Square className="w-4 h-4 flex-shrink-0" />
+                <Triangle className="w-4 h-4 flex-shrink-0" />
                 <span>Machine Learning Engineer, Duodecimal</span>
               </div>
             </div>
@@ -139,7 +139,9 @@ export default function Home() {
                 className="group block p-4 border border-[var(--font-color)]/10 hover:border-[var(--accent-color)] transition-colors duration-300"
               >
                 <div className="mb-4 flex items-center justify-between">
-                  <Square className="w-8 h-8" />
+                  <Square 
+                    className="w-8 h-8 group-hover:text-[var(--accent-color)]" 
+                  />
                   <span className="text-sm text-[var(--font-color)]/60">{`0${index + 1}`}</span>
                 </div>
                 <h3 className="text-lg mb-4 group-hover:text-[var(--accent-color)]">{project.title}</h3>
