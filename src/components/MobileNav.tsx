@@ -15,7 +15,7 @@ export default function MobileNav() {
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
       {isOpen && (
-        <div className="fixed inset-0 bg-[#f2f2f2] z-50 flex flex-col items-center justify-center">
+        <div className="fixed inset-0 bg-[var(--background-color)] z-50 flex flex-col items-center justify-center">
           <button onClick={toggleMenu} className="absolute top-4 right-4">
             <X className="w-6 h-6" />
           </button>
@@ -23,7 +23,7 @@ export default function MobileNav() {
             <Link href="#about" onClick={toggleMenu}>about</Link>
             <Link href="#experience" onClick={toggleMenu}>experience</Link>
             <Link href="#projects" onClick={toggleMenu}>projects</Link>
-            <a href="mailto:siddarthreddygsr@gmail.com" className="text-[#ff4400]" onClick={toggleMenu}>contact</a>
+            <a href="mailto:siddarthreddygsr@gmail.com" className="text-[var(--accent-color)]" onClick={toggleMenu}>contact</a>
           </nav>
         </div>
       )}

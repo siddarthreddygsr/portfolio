@@ -3,13 +3,20 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 242, 242, 242;
+  --background-color: #FFF;
+  --font-color: 0, 0, 0;
+  --accent-color: #ff4400;
+}
+
+.dark{
+  --background-color: #000;
+  --font-color: #FFF;
+  --accent-color: #ff4400;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  color: rgb(var(--font-color));
+  background: rgb(var(--background-color));
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
