@@ -1,4 +1,4 @@
-import { Circle, Square, Minus, Triangle } from 'lucide-react'
+import { Circle, Minus, Triangle } from 'lucide-react'
 import Link from 'next/link'
 import MobileNav from '../components/MobileNav'
 import ThemeToggle from '../components/ThemeToggle'
@@ -79,9 +79,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="experience" className="py-20 px-4 sm:px-6 border-t border-[var(--font-color)]/10">
+      <section id="experience" className="py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-2xl mb-12">experience</h2>
+          <h2 className="text-2xl mb-12">experience_</h2>
           <div className="space-y-16">
             <div className="grid grid-cols-1 sm:grid-cols-[1fr_2fr] gap-4 sm:gap-12">
               <div className="text-sm">
@@ -126,22 +126,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="projects" className="py-20 px-4 sm:px-6 border-t border-[var(--font-color)]/10">
+      <section id="projects" className="py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-2xl mb-12">projects</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+          <h2 className="text-2xl mb-12">projects_</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-12">
             {projects.map((project, index) => (
               <a 
                 key={index} 
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer" 
-                className="group block p-4 border border-[var(--font-color)]/10 hover:border-[var(--accent-color)] transition-colors duration-300"
+                className="group rounded-lg block p-4 border bg-[var(--background-color)] border-[var(--font-color)]/10 hover:border-[var(--accent-color)] transition-colors duration-300"
               >
                 <div className="mb-4 flex items-center justify-between">
-                  <Square 
-                    className="w-8 h-8 group-hover:text-[var(--accent-color)]" 
-                  />
                   <span className="text-sm text-[var(--font-color)]/60">{`0${index + 1}`}</span>
                 </div>
                 <h3 className="text-lg mb-4 group-hover:text-[var(--accent-color)]">{project.title}</h3>

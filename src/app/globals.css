@@ -6,17 +6,19 @@
   --background-color: #FFF;
   --font-color: #000;
   --accent-color: #ff4400;
+  --bg-shades: #ddd;
 }
 
 .dark{
   --background-color: #000;
   --font-color: #FFF;
   --accent-color: #ff4400;
+  --bg-shades: #222;
 }
 
 body {
-  color: rgb(var(--font-color));
-  background: rgb(var(--background-color));
+  color: var(--font-color);
+  background: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

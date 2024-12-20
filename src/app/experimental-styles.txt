@@ -1,0 +1,2 @@
+border-[var(--font-color)]/10 bg-[linear-gradient(0deg,var(--bg-shades)_1px,transparent_1px),linear-gradient(90deg,var(--bg-shades)_1px,transparent_1px)] bg-[length:20px_20px] #grid
+bg-[radial-gradient(var(--bg-shades)_1px,transparent_1px)] bg-[length:20px_20px] #dot matrix
