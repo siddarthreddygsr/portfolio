@@ -1,4 +1,4 @@
-import { Circle, Minus, Triangle } from 'lucide-react'
+import { Hexagon, Minus, Cpu, Square, Triangle } from 'lucide-react'
 import Link from 'next/link'
 import MobileNav from '../components/MobileNav'
 import ThemeToggle from '../components/ThemeToggle'
@@ -42,7 +42,7 @@ export default function Home() {
       <nav className="fixed w-full top-0 bg-[var(--background-color)] border-b border-[var(--font-color)]/10 z-50">
         <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
-            <Circle className="w-4 h-4" />
+            <Hexagon className="w-4 h-4" />
             <span className="text-sm">{formattedDate}</span>
           </div>
           <div className="hidden lg:flex items-center gap-12 text-sm">
@@ -66,7 +66,7 @@ export default function Home() {
             <div>
               <p className="text-base sm:text-lg mb-4">AI Engineer specializing in development and deployment of machine learning and backend applications.</p>
               <div className="flex gap-4 text-sm">
-                <Triangle className="w-4 h-4 flex-shrink-0" />
+                <Cpu className="w-5 h-5 flex-shrink-0 text-[var(--accent-color)]" />
                 <span>Machine Learning Engineer, Duodecimal</span>
               </div>
             </div>
@@ -89,10 +89,19 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg mb-4">Machine Learning Engineer — Duodecimal</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>Developing and deploying machine learning models</li>
-                  <li>Optimizing AI algorithms for production environments</li>
-                  <li>Collaborating on cutting-edge AI research projects</li>
+                <ul className="space-y-2 text-sm font-mono">
+                  <li className="flex items-start">
+                    <Square className="w-3 h-3 mr-2 mt-1 text-[var(--accent-color)]" />
+                    <span>Developing and deploying machine learning models</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Square className="w-3 h-3 mr-2 mt-1 text-[var(--accent-color)]" />
+                    <span>Optimizing AI algorithms for production environments</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Square className="w-3 h-3 mr-2 mt-1 text-[var(--accent-color)]" />
+                    <span>Collaborating on cutting-edge AI research projects</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -103,9 +112,20 @@ export default function Home() {
               <div>
                 <h3 className="text-lg mb-4">Backend Intern — Gocomet</h3>
                 <ul className="space-y-2 text-sm">
-                  <li>Built data integrations for shipment tracking</li>
-                  <li>Developed Ruby data processing pipelines</li>
-                  <li>Automated 25% of processes</li>
+                <ul className="space-y-2 text-sm font-mono">
+                  <li className="flex items-start">
+                    <Square className="w-3 h-3 mr-2 mt-1 text-[var(--accent-color)]" />
+                    <span>Built data integrations for shipment tracking</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Square className="w-3 h-3 mr-2 mt-1 text-[var(--accent-color)]" />
+                    <span>Developed Ruby data processing pipelines</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Square className="w-3 h-3 mr-2 mt-1 text-[var(--accent-color)]" />
+                    <span>Automated 25% of processes</span>
+                  </li>
+                </ul>
                 </ul>
               </div>
             </div>
@@ -115,10 +135,19 @@ export default function Home() {
               </div>
               <div>
                 <h3 className="text-lg mb-4">Intern — 5th Bridge Data Technologies</h3>
-                <ul className="space-y-2 text-sm">
-                  <li>Dockerized ML applications</li>
-                  <li>Designed Flask APIs</li>
-                  <li>Built real-time attack detection system</li>
+                <ul className="space-y-2 text-sm font-mono">
+                  <li className="flex items-start">
+                    <Square className="w-3 h-3 mr-2 mt-1 text-[var(--accent-color)]" />
+                    <span>Dockerized ML applications</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Square className="w-3 h-3 mr-2 mt-1 text-[var(--accent-color)]" />
+                    <span>Designed Flask APIs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Square className="w-3 h-3 mr-2 mt-1 text-[var(--accent-color)]" />
+                    <span>Built real-time attack detection system</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -139,13 +168,14 @@ export default function Home() {
                 className="group rounded-lg block p-4 border bg-[var(--background-color)] border-[var(--font-color)]/10 hover:border-[var(--accent-color)] transition-colors duration-300"
               >
                 <div className="mb-4 flex items-center justify-between">
+                  <Triangle className="w-4 h-4 text-[var(--accent-color)]" />
                   <span className="text-sm text-[var(--font-color)]/60">{`0${index + 1}`}</span>
                 </div>
                 <h3 className="text-lg mb-4 group-hover:text-[var(--accent-color)]">{project.title}</h3>
                 <ul className="space-y-2">
                   {project.description.map((point, pointIndex) => (
                     <li key={pointIndex} className="flex items-start">
-                      <Minus className="w-4 h-4 mr-2 mt-1 flex-shrink-0" />
+                      <Minus className="w-4 h-4 mr-2 mt-1 flex-shrink-0 text-[var(--accent-color)]" />
                       <span className="text-sm text-[var(--font-color)]/80">{point}</span>
                     </li>
                   ))}
@@ -159,7 +189,7 @@ export default function Home() {
       <footer className="py-8 px-4 sm:px-6 border-t border-[var(--font-color)]/10">
         <div className="container mx-auto max-w-4xl text-sm flex flex-col sm:flex-row justify-between items-center gap-4">
           <div className="flex items-center gap-2">
-            <Circle className="w-4 h-4" />
+            <Hexagon className="w-4 h-4" />
             <span>Gurram Siddarth Reddy</span>
           </div>
           <a href="mailto:siddarthreddygsr@gmail.com" className="text-[var(--accent-color)]">

@@ -22,7 +22,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleDarkMode}
-      className="w-24 h-8 bg-[var(--background-color)] border border-[var(--font-color)] relative font-mono text-xs flex items-center justify-start px-2 overflow-hidden"
+      className="w-24 h-8 bg-[var(--background-color)] border border-[var(--accent-color)] relative font-mono text-xs flex items-center justify-start px-2 overflow-hidden"
       aria-label={darkMode ? "Switch to light mode" : "Switch to dark mode"}
     >
       <AnimatePresence mode="wait">
