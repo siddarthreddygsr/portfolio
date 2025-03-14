@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={geistMono.className}>{children}</body>
+      <body id="__next" className={geistMono.className}>{children}</body>
     </html>
   )
 }

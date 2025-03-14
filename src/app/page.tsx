@@ -2,6 +2,8 @@ import { Hexagon, Minus, Cpu, Square, Triangle } from 'lucide-react'
 import Link from 'next/link'
 import MobileNav from '../components/MobileNav'
 import ThemeToggle from '../components/ThemeToggle'
+import CustomModal from '../components/Modal';
+
 
 export default function Home() {
   const projects = [
@@ -39,6 +41,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[var(--background-color)] text-[var(--font-color)]">
+      <CustomModal />
       <nav className="fixed w-full top-0 bg-[var(--background-color)] border-b border-[var(--font-color)]/10 z-50">
         <div className="container mx-auto px-4 sm:px-6 py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
