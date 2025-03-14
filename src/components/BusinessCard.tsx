@@ -24,7 +24,7 @@ export default function BusinessCard({
       {/* Card container that rotates on mobile */}
       <div
         className={`
-          relative bg-[var(--background-color)] rounded-3xl border shadow-md overflow-hidden
+          relative bg-[var(--background-color)] rounded-3xl border border-[#2a2a2a] shadow-md overflow-hidden
           transition-all duration-500
           ${
             isMobile
