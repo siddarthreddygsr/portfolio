@@ -29,7 +29,8 @@ const CustomModal = () => {
     router.push(newURL.toString());
   };
 
-  const customStyles = {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const customStyles: any = {
     overlay: {
       backgroundColor: 'rgba(0, 0, 0, 0.75)',
       zIndex: 1000, // Ensure it's on top of everything
