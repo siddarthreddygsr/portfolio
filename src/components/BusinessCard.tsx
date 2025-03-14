@@ -24,7 +24,7 @@ export default function BusinessCard({
       {/* Card container that rotates on mobile */}
       <div
         className={`
-          relative bg-white rounded-3xl border border-gray-300 shadow-md overflow-hidden
+          relative bg-[var(--background-color)] rounded-3xl border shadow-md overflow-hidden
           transition-all duration-500
           ${
             isMobile
@@ -45,7 +45,7 @@ export default function BusinessCard({
 
             {/* NFC icon */}
             <div className="absolute top-4 right-4">
-              <Nfc className="w-8 h-8 text-gray-700" />
+              <Nfc className="w-8 h-8" />
             </div>
           </div>
 
